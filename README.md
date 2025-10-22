@@ -32,10 +32,12 @@ It enables NGOs to manage events, connect with volunteers, and share their initi
 
 ## 📂 Folder Structure
 
+```bash
 NGO-Connect/
 ├── backend/    # express.js + MongoDB API Server
 ├── frontend/   # React client application
 └── README.md   # You are reading this here!
+```
 
 ---
 
