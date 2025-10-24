@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import apiClient from "../api/axios";
 
-const allowedStatuses = ["upcoming", "ongoing", "completed", "cancelled"];
+const allowedStatuses = ["Upcoming", "Ongoing", "Completed", "Cancelled"];
 
 const CreateEvent = ({ currentUser }) => {
   const navigate = useNavigate();

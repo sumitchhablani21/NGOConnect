@@ -2,13 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-    const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-slate-950 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Brand Section */}
             <div>
               <Link to="/" className="inline-block mb-3">
                 <h2 className="text-xl font-bold text-white">NGO Connect</h2>
@@ -18,7 +17,6 @@ const Footer = () => {
                 communities.
               </p>
 
-              {/* Social Media Links */}
               <div className="flex space-x-3">
                 <a
                   href="https://www.facebook.com/sumit.chhablani.96"
@@ -93,7 +91,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div>
               <h3 className="text-white font-semibold mb-3">Quick Links</h3>
               <ul className="space-y-2">
@@ -132,7 +129,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Support */}
             <div>
               <h3 className="text-white font-semibold mb-3">Legal</h3>
               <ul className="space-y-2">
@@ -165,7 +161,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="py-4 border-t border-slate-800">
           <div className="flex justify-center items-center">
             <p className="text-gray-400 text-sm mb-2 md:mb-0">

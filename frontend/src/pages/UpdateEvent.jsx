@@ -6,7 +6,7 @@ import { toast, Toaster } from "react-hot-toast";
 const allowedStatuses = ["Upcoming", "Ongoing", "Completed", "Cancelled"];
 
 const UpdateEvent = ({ currentUser }) => {
-  const { eventId } = useParams(); // Must match route parameter
+  const { eventId } = useParams();
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
@@ -26,14 +26,12 @@ const UpdateEvent = ({ currentUser }) => {
         const response = await apiClient.get(`/events/${eventId}`);
         const event = response.data.data;
 
-        // Authorization check
         if (!currentUser || currentUser._id !== event.owner._id) {
           toast.error("You are not authorized to update this event.");
           navigate(`/events/${eventId}`);
           return;
         }
 
-        // Pre-fill form
         setTitle(event.title);
         setDescription(event.description);
         setDate(event.date ? event.date.split("T")[0] : "");

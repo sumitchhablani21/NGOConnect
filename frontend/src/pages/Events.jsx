@@ -10,7 +10,6 @@ const Events = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch events from backend API
     const fetchEvents = async () => {
       try {
         const response = await apiClient.get("/events");
@@ -49,7 +48,6 @@ const Events = () => {
               onClick={() => navigate(`/events/${event._id}`)}
               className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-[1.03] overflow-hidden border border-gray-100 flex flex-col h-full"
             >
-              {/* Event Image - Fixed Height */}
               <div className="w-full h-60 bg-gray-100 flex items-center justify-center flex-shrink-0">
                 {event.images && event.images.length > 0 ? (
                   <img
@@ -64,9 +62,7 @@ const Events = () => {
                 )}
               </div>
 
-              {/* Card Content - Flex container with space-between */}
               <div className="px-3 py-2 flex flex-col justify-between flex-grow">
-                {/* Top Content Section */}
                 <div className="space-y-2">
                   <h2 className="text-xl font-bold text-gray-800 line-clamp-1">
                     {event.title}
@@ -75,16 +71,12 @@ const Events = () => {
                     {event.description}
                   </p>
 
-                  {/* Event Meta */}
                   <div className="flex justify-between items-center text-sm text-gray-500 pt-2">
                     <span>{new Date(event.date).toLocaleDateString()}</span>
-                    <span className="text-right">
-                      {event.location}
-                    </span>
+                    <span className="text-right">{event.location}</span>
                   </div>
                 </div>
 
-                {/* Owner Info - Always at Bottom */}
                 <div className="flex items-center gap-3 pt-4 mt-4 border-t border-gray-100">
                   {event.owner?.avatar ? (
                     <img
