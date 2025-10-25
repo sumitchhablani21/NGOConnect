@@ -17,11 +17,16 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-// routes
+app.get("/api/v1/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    message: "Server is alive",
+  });
+});
+
 import userRouter from "./routes/user.routes.js";
 import eventRouter from "./routes/event.routes.js";
 
-// routes declaration
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/events", eventRouter);
 

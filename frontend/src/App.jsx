@@ -15,6 +15,23 @@ import UpdateEvent from "./pages/UpdateEvent";
 
 function App() {
   const { currentUser } = useAuth();
+
+  useEffect(() => {
+    const preloader = document.querySelector(".preloader");
+    if (preloader) {
+      preloader.classList.add("hidden");
+    }
+
+    const wakeUpServer = async () => {
+      try {
+        await apiClient.get("/health");
+      } catch (e) {
+        // This request is only to wake the server, errors can be ignored.
+      }
+    };
+    wakeUpServer();
+  }, []);
+
   return (
     <>
       <Navbar />
