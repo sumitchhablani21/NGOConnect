@@ -88,6 +88,11 @@ npm run dev
 
 Feel free to reach out to me for collaboration or questions!  
 
-- 📧 Email: [sumitchhablani20@gmail.com](mailto:sumitchhablani20@gmail.com)  
-- 💼 LinkedIn: [Click Here](https://www.linkedin.com/in/sumit-chhablani)  
-- 🐙 GitHub: [Click Here](https://github.com/sumitchhablani21)   
+- 📧 Email: [sumitchhablani20@gmail.com](mailto:sumitchhablani20@gmail.com)
+- 💼 LinkedIn: [Click Here](https://www.linkedin.com/in/sumit-chhablani)
+- 🐙 GitHub: [Click Here](https://github.com/sumitchhablani21)
+
+---
+
+## Hosted Application Link
+https://ngo-connect-sumit.vercel.app
